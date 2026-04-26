@@ -49,5 +49,20 @@ function calcular(){
     let analizar = analizarCredito(saldof , montoE, tasaE, plazoE)
     let status= document.getElementById("spnEstadoCredito");
 
-    
+    let cmparriendo = document.getElementById("txtArriendo");
+    let arriendosrc = cmparriendo.value;
+    let arriendoE = parseFloat(arriendosrc);
+
+    let cmpalimentacion = document.getElementById("txtAlimentacion");
+    let alimentacionsrc = cmpalimentacion.value;
+    let alimentacionE = parseFloat(alimentacionsrc);
+
+    let cmpvarios = document.getElementById("txtVarios");
+    let variossrc = cmpvarios.value;
+    let variosE = parseFloat(variossrc);
+
+    let totalgastos = sumaGastos(arriendoE , alimentacionE , variosE);
+
+    let spngastos = document.getElementById("spnTotalGastos");
+    spngastos.innerText = totalgastos;
 }

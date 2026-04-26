@@ -45,3 +45,8 @@ function analizarCredito (montoDisponible,monto,tasa,plazaAnios){
 
     return status;
 }
+
+function sumaGastos (arriendo,alimentacion,varios){
+    let totalGastos = arriendo + alimentacion + varios;
+    return totalGastos ;
+}

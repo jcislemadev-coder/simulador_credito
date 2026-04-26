@@ -1,70 +1,171 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+* {
     margin: 0;
     padding: 0;
-}
-
-.container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-p {
-    margin-top: 10px;
+/* LOGO */
+.logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.logo-container img {
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* TABLET */
+@media (min-width: 600px) {
+    .logo-container img {
+        width: 220px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+    .logo-container img {
+        width: 260px;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR */
+.container {
+    background: #fff;
+    width: 95%;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* TITULO */
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+/* SECCIONES */
+h2 {
+    margin: 20px 0 10px;
+    color: #0f172a;
+    border-left: 5px solid #22c55e;
+    padding-left: 10px;
+}
+
+/* GRID FORM */
+.form-grid {
+    display: grid;
+    gap: 15px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+label {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 5px;
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 5px rgba(30,58,138,0.3);
+}
+
+/* RESULTADOS */
+.resultados {
+    margin-top: 15px;
+}
+
+.resultados p {
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 span {
     font-weight: bold;
-    color: #2c3e50;
+    color: #1e3a8a;
 }
 
+/* BOTONES */
 .buttons {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 button {
-    width: 48%;
-    padding: 10px;
+    flex: 1;
+    min-width: 140px;
+    padding: 12px;
+    border-radius: 12px;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
+/* BOTON PRINCIPAL */
+#btnCalcularCredito {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+}
+
+/* BOTON SECUNDARIO */
+#btnReiniciar {
+    background: #e2e8f0;
+}
+
+/* HOVER */
 button:hover {
-    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* 📱 MOBILE (por defecto) */
+.form-grid {
+    grid-template-columns: 1fr;
+}
+
+/* 📲 TABLET */
+@media (min-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 💻 DESKTOP */
+@media (min-width: 900px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
 }
